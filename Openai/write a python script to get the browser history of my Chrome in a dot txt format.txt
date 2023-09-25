@@ -1,0 +1,37 @@
+OpenAi response for Prompt : just Nova I need your assistance for one job that is using artificial intelligence write a python script to get the browser history of my Chrome in a dot txt format 
+************************
+
+Certainly! To help you write a Python script that extracts your Chrome browser history and saves it in a .txt file, I recommend using the `sqlite3` module to access Chrome's history database. The following script should achieve this:
+
+```python
+import sqlite3
+
+def get_chrome_history():
+    # Path to your Chrome history database
+    history_db = '/home/USERNAME/.config/google-chrome/Default/History'  # Replace USERNAME with your system username
+
+    # Connect to the Chrome history database
+    connection = sqlite3.connect(history_db)
+    cursor = connection.cursor()
+
+    # Query to fetch the browser history
+    query = "SELECT title, url, last_visit_time FROM urls ORDER BY last_visit_time DESC"
+
+    # Execute the query
+    cursor.execute(query)
+
+    # Fetch all the rows from the query result
+    history = cursor.fetchall()
+
+    # Close the database connection
+    connection.close()
+
+    return history
+
+def save_history_to_txt(history):
+    with open('chrome_history.txt', 'w') as file:
+        # Loop through the history and write it to the file
+        for entry in history:
+            title = entry[0]
+            url = entry[1]
+            last_visit_time = entry[2]

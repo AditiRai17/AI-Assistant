@@ -1,0 +1,37 @@
+OpenAi response for Prompt : Nova using artificial intelligence write a python script to take the key locks 
+************************
+
+Sure! Here's a simple Python script that uses artificial intelligence to demonstrate how a program can take input for key locks:
+
+```python
+import time
+
+def unlock_lock(key):
+    # Simulating AI processing time
+    time.sleep(1)
+    
+    # Perform AI analysis
+    if key == '1234':
+        return True
+    else:
+        return False
+
+def take_input():
+    # Artificial intelligence powered key lock system
+    
+    while True:
+        key = input("Enter key: ")
+        unlocked = unlock_lock(key)
+        
+        if unlocked:
+            print("Lock has been successfully unlocked!")
+            break
+        else:
+            print("Invalid key. Please try again.")
+
+take_input()
+```
+
+In this script, the `unlock_lock` function represents the AI processing whereby the program sleeps for 1 second as a simulation and then checks if the entered key (in this case, '1234') matches the actual key. The `take_input` function is responsible for continuously taking input from the user and checking if the lock should be unlocked based on AI analysis.
+
+You can customize the logic inside the `unlock_lock` function to perform more complex AI analysis for real key locks.

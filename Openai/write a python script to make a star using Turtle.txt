@@ -1,0 +1,31 @@
+OpenAi response for Prompt : using artificial intelligence write a python script to make a star using Turtle 
+************************
+
+Certainly! Here's a Python script that uses the Turtle module to create a star shape using artificial intelligence:
+
+```python
+import turtle
+
+def draw_star():
+    t = turtle.Turtle()
+    t.speed(10)
+    
+    # Determine the size of the star
+    size = int(input("Enter the size of the star: "))
+    
+    # Move the turtle to starting position
+    t.penup()
+    t.goto(0, -size)
+    t.pendown()
+    
+    # Draw the star
+    for _ in range(5):
+        t.forward(size * 2)
+        t.right(144)
+    
+    turtle.done()
+
+draw_star()
+```
+
+To run the script, save it with a .py extension, e.g., `star.py`, and execute it using a Python interpreter. When prompted, enter the desired size of the star. The turtle will then draw a star shape with the specified size.

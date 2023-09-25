@@ -1,0 +1,29 @@
+OpenAi response for Prompt : hello Neha using artificial intelligence give me a script which find all the vulnerabilities of the website and URL should be given in your input 
+************************
+
+Hello! While I can't directly perform tasks like vulnerability scanning as an AI language model, I can provide you with a general outline of how to approach finding vulnerabilities in a website. There are many specialized tools and techniques used for vulnerability assessment and penetration testing, so it's important to use ethical hacking practices and obtain proper authorization before testing any website's security.
+
+Here is a script example that you can use as a starting point for a vulnerability scanning process:
+
+```python
+import requests
+
+def scan_website(url):
+    # Start by checking if the website is reachable
+    try:
+        response = requests.get(url)
+        # Check the response status code
+        if response.status_code != 200:
+            print("Website is not responding")
+            return
+    except:
+        print("Website is not reachable")
+        return
+
+    # Proceed with vulnerability scanning using various techniques or tools
+    # For example, you can use tools like OWASP ZAP, Nessus, or Nikto for scanning
+
+    # If you have specific vulnerabilities in mind, you can directly test for them
+    # For example, testing for a known vulnerability in a specific parameter
+    payload = "' OR '1'='1"
+    url_with_payload = url + "/example.php?param="

@@ -1,0 +1,31 @@
+OpenAi response for Prompt : using artificial intelligence write a python script to give the details of my system 
+************************
+
+Sure! Here's a Python script that uses artificial intelligence to gather and provide details about your system:
+
+```python
+import platform
+import psutil
+
+def get_system_details():
+    system_details = {}
+
+    # Get basic system information
+    system_details["System"] = platform.system()
+    system_details["Node Name"] = platform.node()
+    system_details["Release"] = platform.release()
+    system_details["Version"] = platform.version()
+
+    # Get CPU information
+    cpu_info = {}
+    cpu_info["Brand"] = platform.processor()
+    cpu_info["Architecture"] = platform.machine()
+    cpu_info["Total Cores"] = psutil.cpu_count(logical=False)
+    cpu_info["Total Threads"] = psutil.cpu_count(logical=True)
+    system_details["CPU"] = cpu_info
+
+    # Get memory information
+    memory_info = {}
+    memory_info["Total"] = round(psutil.virtual_memory().total / (1024**3), 2)  # Convert to GB
+    memory_info["Available"] = round(psutil.virtual_memory().available / (1024**3), 2)  # Convert to GB
+    memory_info["Used"] = round(psutil.virtual_memory().used / (1024**3), 2

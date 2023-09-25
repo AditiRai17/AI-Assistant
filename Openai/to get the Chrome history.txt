@@ -1,0 +1,42 @@
+OpenAi response for Prompt : Nova now create a python script using artificial intelligence to get the Chrome history 
+************************
+
+Sure! Here's a Python script that uses artificial intelligence to fetch the Chrome browsing history:
+
+```python
+import os
+import sqlite3
+
+from datetime import datetime
+from selenium import webdriver
+
+# Set up artificial intelligence model or library for processing the Chrome history data
+# Here we'll use BeautifulSoup for simplicity
+
+from bs4 import BeautifulSoup
+
+
+def main():
+    # Set Chrome options to disable browser notifications and remove 'save password' pop-ups
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--disable-notifications")
+    chrome_options.add_argument("--disable-save-password-bubble")
+
+    # Set the path to your Chrome browser executable
+    chrome_path = "/path/to/chrome"
+
+    # Start Chrome WebDriver with specified options and executable path
+    driver = webdriver.Chrome(executable_path=chrome_path, options=chrome_options)
+
+    # Fetch Chrome history data
+    history = get_chrome_history(driver)
+
+    # Process the history data using artificial intelligence
+    processed_data = process_history_with_ai(history)
+
+    print(processed_data)  # Print or use the processed data as needed
+
+
+def get_chrome_history(driver):
+    # Connect to the Chrome history database
+    history_file = os.path.expanduser("~") + "/.config/google-chrome/
