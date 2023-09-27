@@ -7,7 +7,7 @@ Nova AI Assistant is a voice-controlled AI assistant powered by OpenAI's GPT-3.5
 
 
 
-https://github.com/AditiRai17/AI-Assistant/assets/91966396/b2d80734-823c-42c0-ab15-b40e382ac648
+https://github.com/AditiRai17/AI-Assistant/assets/91966396/050160b1-6582-4e1f-b0c5-695098354750
 
 
 
